@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <title>AVG Calc</title>
     <script>
-        var value1 = prompt('1번 숫자를 입력해주세요');
-        var value2 = prompt('2번 숫자를 입력해주세요');
+        var sum = 0;
+        var totalNumbers = 10;
 
-        var num1 = Number(value1);
-        var num2 = Number(value2);
-        var sum = num1 + num2;
+        for(var i = 1; i <= totalNumbers; i++) {
+            var value = prompt(i + '번째 숫자를 입력하세요.');
 
-        alert('합: ' + sum);
+            sum += Number(value);
+        }
+        //alert('합: ' + sum);
 
         //평균값을 계산한다.
-        var avg = sum / 2;
+        var avg = sum / totalNumbers;
         alert('평균: ' + avg);
     </script>
 </head>
